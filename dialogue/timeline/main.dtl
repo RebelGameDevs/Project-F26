@@ -1,0 +1,9 @@
+join obi_wan center
+obi_wan: Hello there.
+Hello there again.
+- The droids turn.
+	The droids advance.
+	[signal arg="main1"]
+- Their leader turns.
+	General Kenobi!
+	Part 2
