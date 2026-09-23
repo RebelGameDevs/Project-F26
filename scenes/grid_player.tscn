@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://kl674obo20hr"]
+
+[ext_resource type="Script" uid="uid://d1bj23j2eycnu" path="res://script/grid_player.gd" id="1_alnit"]
+[ext_resource type="Texture2D" uid="uid://dhle43ek6ljle" path="res://sprites/dogPlaceholder.png" id="2_spuxv"]
+[ext_resource type="Texture2D" uid="uid://cyn33g6j8kkai" path="res://sprites/ratPlaceholder.png" id="3_ro76u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rob7"]
+radius = 16.0
+height = 64.0
+
+[node name="GridPlayer" type="CharacterBody2D" unique_id=454595138]
+y_sort_enabled = true
+script = ExtResource("1_alnit")
+tween_speed = 0.2
+follow_distance = 40
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1683039568]
+texture_filter = 1
+position = Vector2(4.7683716e-07, 5.9604645e-08)
+texture = ExtResource("2_spuxv")
+metadata/_edit_group_ = true
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="." unique_id=1203068338]
+shape = SubResource("CapsuleShape2D_6rob7")
+metadata/_edit_group_ = true
+
+[node name="FollowPoint" type="Marker2D" parent="." unique_id=725909967]
+
+[node name="FollowSprite" type="Sprite2D" parent="." unique_id=1057839317]
+texture_filter = 1
+texture = ExtResource("3_ro76u")
