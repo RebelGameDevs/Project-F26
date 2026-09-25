@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyn33g6j8kkai"
-path="res://.godot/imported/ratPlaceholder.png-5349b4745204257cfafc445184851169.ctex"
+uid="uid://blku4hcc518cb"
+path="res://.godot/imported/tiles_placeholder.PNG-d2426e73e98c221c804cd56777474504.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ratPlaceholder.png"
-dest_files=["res://.godot/imported/ratPlaceholder.png-5349b4745204257cfafc445184851169.ctex"]
+source_file="res://sprites/tiles_placeholder.PNG"
+dest_files=["res://.godot/imported/tiles_placeholder.PNG-d2426e73e98c221c804cd56777474504.ctex"]
 
 [params]
 

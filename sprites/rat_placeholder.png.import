@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhle43ek6ljle"
-path="res://.godot/imported/dogPlaceholder.png-26f642b2e4aa799e1529c7a09477232f.ctex"
+uid="uid://cyn33g6j8kkai"
+path="res://.godot/imported/rat_placeholder.png-01c1cb23104c4229ce8f38c6b63be71d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dogPlaceholder.png"
-dest_files=["res://.godot/imported/dogPlaceholder.png-26f642b2e4aa799e1529c7a09477232f.ctex"]
+source_file="res://sprites/rat_placeholder.png"
+dest_files=["res://.godot/imported/rat_placeholder.png-01c1cb23104c4229ce8f38c6b63be71d.ctex"]
 
 [params]
 

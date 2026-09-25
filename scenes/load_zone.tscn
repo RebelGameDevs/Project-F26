@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://2anieq854bgg"]
+
+[ext_resource type="Script" uid="uid://beq6cl0t064wl" path="res://load_zone.gd" id="1_gajtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rob7"]
+size = Vector2(32, 32)
+
+[node name="LoadZone" type="Area2D" unique_id=1166375010]
+script = ExtResource("1_gajtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=992987655]
+shape = SubResource("RectangleShape2D_6rob7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
