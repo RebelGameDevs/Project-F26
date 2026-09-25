@@ -85,6 +85,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 interactable=""
 npc=""
 player=""
+obstacle=""
 
 [input]
 

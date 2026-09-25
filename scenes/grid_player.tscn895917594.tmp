@@ -2,128 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1bj23j2eycnu" path="res://scenes/grid_player.gd" id="1_alnit"]
 [ext_resource type="Texture2D" uid="uid://dnem7o2b4owd5" path="res://sprites/wolf_sheet_placeholder.png" id="2_spuxv"]
-[ext_resource type="Texture2D" uid="uid://tiycyc27u3oq" path="res://sprites/rat_sheet_placeholder.png" id="3_spuxv"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xawqi"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(0, 64, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wqcr0"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(32, 64, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_in7io"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(64, 64, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkevd"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(96, 64, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68hra"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(0, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3r7wd"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(32, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sqei5"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(64, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fglhs"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(96, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfsjk"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(0, 128, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oef5k"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(32, 128, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8ld0"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(64, 128, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4aeg"]
-atlas = ExtResource("3_spuxv")
-region = Rect2(96, 128, 32, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_npmfu"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xawqi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wqcr0")
-}],
-"loop": 1,
-"name": &"back_idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_in7io")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nkevd")
-}],
-"loop": 1,
-"name": &"back_walk",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68hra")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3r7wd")
-}],
-"loop": 1,
-"name": &"front_idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sqei5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fglhs")
-}],
-"loop": 1,
-"name": &"front_walk",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pfsjk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oef5k")
-}],
-"loop": 1,
-"name": &"side_idle",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k8ld0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s4aeg")
-}],
-"loop": 1,
-"name": &"side_walk",
-"speed": 3.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_33cd3"]
-radius = 16.0
-height = 62.0
+[ext_resource type="Texture2D" uid="uid://cyn33g6j8kkai" path="res://sprites/rat_placeholder.png" id="3_ro76u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spuxv"]
 atlas = ExtResource("2_spuxv")
@@ -251,22 +130,11 @@ y_sort_enabled = true
 script = ExtResource("1_alnit")
 follow_distance = 40
 
-[node name="Follower" type="CharacterBody2D" parent="." unique_id=1358586649 groups=["npc"]]
-position = Vector2(0, -32)
-collision_mask = 3
-
-[node name="FollowSprite" type="AnimatedSprite2D" parent="Follower" unique_id=656200363]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_npmfu")
-animation = &"front_idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Follower" unique_id=2062244992]
-shape = SubResource("CapsuleShape2D_33cd3")
-
 [node name="WolfSprite" type="AnimatedSprite2D" parent="." unique_id=68123233]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6rob7")
-animation = &"front_idle"
+animation = &"back_walk"
+frame_progress = 0.26632193
 metadata/_edit_group_ = true
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="." unique_id=1203068338]
@@ -275,6 +143,12 @@ metadata/_edit_group_ = true
 
 [node name="FollowPoint" type="Marker2D" parent="." unique_id=725909967]
 position = Vector2(0, -32)
+metadata/_edit_group_ = true
+
+[node name="FollowSprite" type="Sprite2D" parent="." unique_id=1057839317]
+texture_filter = 1
+position = Vector2(0, -32)
+texture = ExtResource("3_ro76u")
 metadata/_edit_group_ = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1238734145]
