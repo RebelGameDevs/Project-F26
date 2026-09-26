@@ -23,3 +23,11 @@ func save() -> void:
 # load all persistent data from a save file
 func load(save_id: int) -> void:
 	pass
+
+
+# =============================================================================
+# Battle Data
+# =============================================================================
+# Enemy array
+# just add enemies to the array when they're made?
+@export var enemy_array : Array[Node2D] = []
