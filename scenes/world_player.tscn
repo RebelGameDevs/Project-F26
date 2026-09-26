@@ -24,7 +24,6 @@ shape = SubResource("CapsuleShape2D_7g4qy")
 disabled = true
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=14105251]
-collision_mask = 0
 
 [node name="InteractCollisionShape" type="CollisionShape2D" parent="InteractArea" unique_id=294782307]
 shape = SubResource("CircleShape2D_qjqma")
