@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://kl674obo20hr"]
+
+[ext_resource type="Script" uid="uid://d1bj23j2eycnu" path="res://scenes/grid_player.gd" id="1_alnit"]
+[ext_resource type="Texture2D" uid="uid://dnem7o2b4owd5" path="res://sprites/wolf_sheet_placeholder.png" id="2_spuxv"]
+[ext_resource type="Texture2D" uid="uid://cyn33g6j8kkai" path="res://sprites/rat_placeholder.png" id="3_ro76u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spuxv"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(0, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro76u"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(32, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvd2c"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(64, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywqt0"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(96, 64, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmvkk"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q382b"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bseax"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31lr2"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxmv1"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(0, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa4t0"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(32, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrcbl"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(64, 128, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dtys"]
+atlas = ExtResource("2_spuxv")
+region = Rect2(96, 128, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rob7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spuxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro76u")
+}],
+"loop": 1,
+"name": &"back_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvd2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywqt0")
+}],
+"loop": 1,
+"name": &"back_walk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmvkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q382b")
+}],
+"loop": 1,
+"name": &"front_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bseax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31lr2")
+}],
+"loop": 1,
+"name": &"front_walk",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxmv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa4t0")
+}],
+"loop": 1,
+"name": &"side_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrcbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dtys")
+}],
+"loop": 1,
+"name": &"side_walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rob7"]
+radius = 16.0
+height = 64.0
+
+[node name="GridPlayer" type="CharacterBody2D" unique_id=454595138 groups=["player"]]
+y_sort_enabled = true
+script = ExtResource("1_alnit")
+follow_distance = 40
+
+[node name="WolfSprite" type="AnimatedSprite2D" parent="." unique_id=68123233]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6rob7")
+animation = &"back_walk"
+frame_progress = 0.26632193
+metadata/_edit_group_ = true
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="." unique_id=1203068338]
+shape = SubResource("CapsuleShape2D_6rob7")
+metadata/_edit_group_ = true
+
+[node name="FollowPoint" type="Marker2D" parent="." unique_id=725909967]
+position = Vector2(0, -32)
+metadata/_edit_group_ = true
+
+[node name="FollowSprite" type="Sprite2D" parent="." unique_id=1057839317]
+texture_filter = 1
+position = Vector2(0, -32)
+texture = ExtResource("3_ro76u")
+metadata/_edit_group_ = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1238734145]
+position = Vector2(0, 16)
+metadata/_edit_group_ = true
