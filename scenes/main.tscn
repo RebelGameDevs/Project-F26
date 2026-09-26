@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cvrrj37a2fajc" path="res://scenes/main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dqccvm088hue" path="res://scenes/battle_manager.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dlrk0hkpq35vu" path="res://scenes/world_player.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bdx2q8acng2r0" path="res://scenes/interactable.tscn" id="4_tefeu"]
+[ext_resource type="Script" uid="uid://b4mwhj5175avx" path="res://scenes/interactable_impl_test.gd" id="5_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bvtpnyotk01le" path="res://icon.svg" id="6_tipki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjqma"]
 
@@ -14,9 +17,6 @@ script = ExtResource("1_0xm2m")
 
 [node name="BattleManager" parent="." unique_id=463724382 groups=["interactable", "npc"] instance=ExtResource("2_sugp2")]
 
-[node name="WorldPlayer" parent="." unique_id=2112592393 instance=ExtResource("3_jyhfs")]
-position = Vector2(51, 71)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=547609117]
 position = Vector2(200, 100)
 
@@ -25,3 +25,12 @@ shape = SubResource("RectangleShape2D_qjqma")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=313159228]
 texture = SubResource("PlaceholderTexture2D_gcjop")
+
+[node name="WorldPlayer" parent="." unique_id=2112592393 instance=ExtResource("3_jyhfs")]
+position = Vector2(71, 71)
+
+[node name="Interactable" parent="." unique_id=1411399411 instance=ExtResource("4_tefeu")]
+position = Vector2(200, 200)
+collision_mask = 1
+interaction_script = ExtResource("5_o6xl0")
+sprite = ExtResource("6_tipki")
