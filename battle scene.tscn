@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgchjqrg6ik12"]
+
+[node name="Node2D" type="Control" unique_id=784179215]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1731648340]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 649.0

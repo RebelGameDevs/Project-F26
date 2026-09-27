@@ -1,0 +1,38 @@
+General Combat Idea:
+
+Stats:
+ - HP: basic hit points (so far)
+ - Stamina: more punishing SP bar
+ - Speed: Determines turn order
+ - Attack: Basic attack of characters attack
+ - Defense: Basic Defense/Damage reduction
+
+Combat 
+
+Turns:
+    - Player's turn:
+        - Player actions:
+            - Base attack: allow the player to perform a set number of actions (ex: inputting -> <- ^): with each input corresponding to a certain attack type (ex: pierce, slash, blunt, etc.*). Player will start off with a max of 2 inputs they can do, but can expand to max of 4-6. These attacks will cost stamina
+                - Note that certain weapons could buff/weaken certain attack types. Was also thinking we could have certain weapons "unlocking" a secret combo which does extra damage or buffs, if we have time for such things.
+            - "Bros"/special attack: These attacks will be powerful, "combo" attacks, which will also have certain attack types, where usually the 2 main protagonists will have to do a specific set of inputs and timings to preform an attack generally stronger then the standard base attack, as well as costing more stamina. 
+            - Items: General items stuff, like healing, buffing, damage do-ers, etc.
+            - Flee: Punishes the player mildly, such as having them lose money, allowing the enemy to attack/get free hits in, or something similar that encourages the player to fight over fleeing in most situations.
+    - Enemy's turn:
+        - Enemy attack:
+            - The player will control 2 protagonists, thus MAY potentially be using the ijkl keys alongside the wasd keys, though potentially we can simplify by potentaily having one of the protagonist be on the other piggybacking or smth. 
+            - Regardless if it's one or two, the player will have the option to jump, dodge left, dodge right, or stay at base position, alongside with parrying. the player CAN'T do a combination of say jumping and dodging left, but they can dodge left and parry for example.
+            - Attacks directed at a certain "area" will be color coded (ex: red for left, blue for right, green for base, and yellow for jumping), and attacks with a white "core" or glint will be parryable, while those with a black glint will not be parryable.
+            - Like in mario & luigi rpgs, attacks can "change area" (ex: an enemy could charge forward at mario, then jump coming back), as to keep players on their toes and have the gameplay be more interactive. This could be seen with like an enemy going for a low at the base "area" then go for a high at the jump "area"
+            - We can also include the possibility of the player doing additinal damage via parrying, jumping on the enemy, or bashing them 
+            - Enemies could also potentially use stamina themselves, meaning we can tire them out and force them to do either weaker attacks or skip a turn
+
+Attack types/status effects:
+    - Was thinking we have atleast 3 different types of attack types corresponding to <- ^ ->, which certain enemies be weak or resilent against, as to encourage more stategy in the players decision beyond just big damage
+    - simple status effects would also help make combat more complex, such as having fire (decreases health over time), poison (decreases both health and stamina over time), and anything else we have in mind
+
+
+Misc.:
+    - Having faster/more accurate inputs can recover stamina
+    - Having inaccurate or late inputs could likewise punish the player
+    - Have a rough idea of an interact or "deduce" (since our protagonists are detectives or something), like in undertale, where you can obtain additional flavor text and potentially weaken an enemy or disencourage them from fighting, though we may not have the opporunity due to the scope.
+
