@@ -9,22 +9,30 @@ size = Vector2(32, 64)
 radius = 16.0
 height = 64.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qjqma"]
-radius = 64.0
-
-[node name="WorldPlayer" type="CharacterBody2D" unique_id=2112592393 node_paths=PackedStringArray("interact_area")]
+[node name="WorldPlayer" type="CharacterBody2D" unique_id=2112592393 node_paths=PackedStringArray("interaction_ray") groups=["player"]]
 script = ExtResource("1_t21sg")
-interact_area = NodePath("InteractArea")
+interaction_ray = NodePath("InteractionRay")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1744667888]
 texture = SubResource("PlaceholderTexture2D_kxtri")
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="." unique_id=27058880]
 shape = SubResource("CapsuleShape2D_7g4qy")
-disabled = true
 
-[node name="InteractArea" type="Area2D" parent="." unique_id=14105251]
-collision_mask = 0
+[node name="InteractionRay" type="RayCast2D" parent="."]
+enabled = true
+target_position = Vector2(0, 64)
+collision_mask = 3
+collide_with_areas = true
+collide_with_bodies = true
+exclude_parent = true
 
-[node name="InteractCollisionShape" type="CollisionShape2D" parent="InteractArea" unique_id=294782307]
-shape = SubResource("CircleShape2D_qjqma")
+[node name="InteractionPrompt" type="Label" parent="."]
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = -36.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "[F] Talk"
+visible = false

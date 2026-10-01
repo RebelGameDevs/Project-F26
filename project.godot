@@ -11,15 +11,18 @@ config_version=5
 [application]
 
 config/name="rpg"
-run/main_scene="uid://cel0qu7mosd4u"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*uid://ds2q0uclmolvu"
-PersistentState="*uid://bvplx7kbohdv3"
-RuntimeState="*uid://cva118nthhlwm"
+PersistentState="*res://script/PersistentState.gd"
+RuntimeState="*res://script/RuntimeState.gd"
+Narrative="*res://Runtime/narrative.gd"
+Audio="*res://Sounds/global_audio.gd"
+ScreenFade="*res://World/Rendering/screen_fade.gd"
+Effects="*res://Effects/effects.gd"
 
 [dialogic]
 
@@ -78,7 +81,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 

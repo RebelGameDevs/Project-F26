@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://dialogue/cutscene_controller.gd" id="1_r4d6t"]
+
+[node name="CutsceneController" type="Node2D" unique_id=1667132406]
+script = ExtResource("1_r4d6t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=767013668]
+
+[node name="Actors" type="Node2D" parent="." unique_id=1833850824]

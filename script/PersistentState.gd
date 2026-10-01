@@ -2,7 +2,7 @@
 # referenced when swapping between scenes or interacting with objects that
 # have persistent data that needs to be stored.
 # Autoloaded - referrable globally without class_name
-extends Object
+extends Node
 
 var current_level: int # which level the player is in?
 var level_entrance: int # levels with multiple exits: where did the player enter from last?

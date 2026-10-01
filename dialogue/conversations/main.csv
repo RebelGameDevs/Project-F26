@@ -1,0 +1,10 @@
+ID,TYPE,NEXT,SPEAKER,PORTRAIT,TEXT,TEXT SPEED,EMOTE,CONDITIONS,EFFECTS,CHOICE GROUP,CHOICE NEXT,CHOICE CONDITIONS
+start,start,hello,,,,,,,,,,
+hello,line,again,Obi-Wan,,Hello there.,,,,,,,
+again,line,choice,,,Hello there again.,,,,,,,
+choice,choice,,,,What happens next?,,,,,main,,
+droids,option,,,,The droids turn.,,,,,main,advance,
+leader,option,,,,Their leader turns.,,,,,main,kenobi,
+advance,end,,,,The droids advance.,,,,emit_event:main1,,,
+kenobi,line,part2,,,General Kenobi!,,,,,,,
+part2,end,,,,Part 2,,,,,,,
