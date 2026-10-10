@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="rpg"
-run/main_scene="uid://cel0qu7mosd4u"
+run/main_scene="uid://db1smlimc7rp4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 PersistentState="*uid://bvplx7kbohdv3"
 RuntimeState="*uid://cva118nthhlwm"
+EnemyData="*uid://bsl3covne0t7r"
 
 [dialogic]
 
