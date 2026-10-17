@@ -13,6 +13,7 @@ var map_levels: Array[String] = [
 	"",
 	"",
 	"",
+	"",
 	"res://scenes/test_world.tscn",
 	"res://scenes/maze_room_test.tscn"
 ]
@@ -63,18 +64,20 @@ func load_level(level_id: LevelEnum, passageway_to: int) -> void:
 	var passageway: Passageway = level_passages.passageways[passageway_to]
 
 	var player: GridPlayer = level.get_node("GridPlayer")
+	player.set_process_input(false)
 	var follower: CharacterBody2D = player.get_node("Follower")
 	var follow_point: Marker2D = player.get_node("FollowPoint")
 	var dir: Vector2 = dir_to_vec2[passageway.enter_facing]
 	# set player position and facing based on passageway
 	player.position = passageway.position + dir * 32 + Vector2.UP * 16 # offset from the entry + offset passageway tile pos and dir
-	follower.position = passageway.position
-	follow_point.position = passageway.position
+	follower.position = -dir * 32
+	follow_point.position = -dir * 32
 	var player_sprite: AnimatedSprite2D = player.get_node("WolfSprite")
 	var follower_sprite: AnimatedSprite2D = follower.get_node("FollowSprite")
 	player.animate_dir(dir, player_sprite, "_idle")
 	player.animate_dir(dir, follower_sprite, "_idle")
 
 	await  transition.fade_out()
+	player.set_process_input(true)
 	# destroy transition
 	transition.queue_free()
