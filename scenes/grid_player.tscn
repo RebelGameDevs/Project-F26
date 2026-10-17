@@ -243,8 +243,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rob7"]
-radius = 16.0
-height = 64.0
+radius = 8.0
+height = 16.0
 
 [node name="GridPlayer" type="CharacterBody2D" unique_id=454595138 groups=["player"]]
 y_sort_enabled = true
@@ -267,9 +267,11 @@ shape = SubResource("CapsuleShape2D_33cd3")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6rob7")
 animation = &"front_idle"
+frame_progress = 0.32301354
 metadata/_edit_group_ = true
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="." unique_id=1203068338]
+position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_6rob7")
 metadata/_edit_group_ = true
 

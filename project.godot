@@ -88,6 +88,7 @@ interactable=""
 npc=""
 player=""
 obstacle=""
+level=""
 
 [input]
 

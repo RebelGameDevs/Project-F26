@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dpwcth4qal88p"]
+
+[ext_resource type="Script" uid="uid://bqrofswwaj8q3" path="res://scenes/passageway.gd" id="1_vtsfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjqma"]
+size = Vector2(32, 32)
+
+[node name="Passageway" type="Area2D" unique_id=1406953434]
+script = ExtResource("1_vtsfw")
+metadata/_custom_type_script = "uid://bqrofswwaj8q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1448028130]
+shape = SubResource("RectangleShape2D_qjqma")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bd4dglhr5br48"]
+
+[ext_resource type="Script" uid="uid://radl3x6mtp3c" path="res://scenes/level_passages.gd" id="1_egibq"]
+
+[node name="LevelPassages" type="Node" unique_id=1149529264]
+script = ExtResource("1_egibq")

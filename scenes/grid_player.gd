@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name GridPlayer
 
 @onready var follow_point: Marker2D = $FollowPoint
 @onready var follow_sprite: AnimatedSprite2D = $Follower/FollowSprite
@@ -77,10 +78,10 @@ func move():
 		var col = ray_cast_2d.get_collider()
 		if (col is Node and col.is_in_group("obstacle")):
 			return
-
+	
 	# otherwise we can start moving
 	moving = true
-
+	
 	follow_point.position = -dir * TILE_SIZE
 
 	animate_dir(dir, wolf_sprite, "_walk")
@@ -89,7 +90,7 @@ func move():
 	var tween = create_tween()
 	tween.tween_property(self, "position", position + dir * TILE_SIZE, tween_speed)
 	await tween.finished
-
+	
 	moving = false
 
 func animate_dir(dir: Vector2, sprite: AnimatedSprite2D, anim_type: String):

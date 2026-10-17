@@ -1,11 +1,10 @@
-extends Node2D
+extends Area2D # reference the position for where to spawn
 class_name Passageway
 
-enum Direction {
-	Left = 0,
-	Up = 1,
-	Right = 2,
-	Down = 3,
-}
+@export var level_to: SceneMap.LevelEnum
+@export var level_to_passageway: int
+@export var enter_facing: SceneMap.Direction
 
-var facing: Direction
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		SceneMap.load_level(level_to, level_to_passageway)
